@@ -52,7 +52,7 @@ folder
         </pre>
         <p><strong>Password:</strong> ansible</p>
     </li>
-    <li><strong>Docker container (via SSH):</strong> Access the Ansible container through SSH:
+    <li><strong>Docker container (via SSH):</strong> Access the Docker container through SSH:
         <pre>
         ssh root@&lt;host-ip&gt; -p 2001
         </pre>
