@@ -6,6 +6,7 @@ services:
     container_name: jenkins-master
     ports:
       - "8080:8080"
+      - "22:22"
     volumes:
       - ./jenkins_home:/var/jenkins_home   # Creates `jenkins_home` directory automatically
     networks:

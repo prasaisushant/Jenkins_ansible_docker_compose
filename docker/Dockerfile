@@ -1,11 +1,13 @@
 # Dockerfile for docker-agent and ansible-agent
 FROM docker
 
-# Install SSH server
-RUN apk update && apk add openssh
+# Install SSH server and Java
+RUN apk update && apk add --no-cache openssh openjdk11-jre
 
 # Generate SSH host keys
 RUN ssh-keygen -A
+
+RUN echo 'root:docker' | chpasswd
 
 # Ensure SSH config allows root login and password authentication
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
