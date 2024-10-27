@@ -58,6 +58,8 @@ folder
         </pre>
         <p><strong>Password:</strong> docker</p>
     </li>
+    <li> For those using docker desktop in replace used localhost in place of host-ip</li>
+</ul>
 </ul>
 
 <h2>Notes</h2>
