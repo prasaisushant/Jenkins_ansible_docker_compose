@@ -46,9 +46,15 @@ folder
 <h2>Accessing Services</h2>
 <ul>
     <li><strong>Jenkins:</strong> Access Jenkins at <code>https://&lt;host_ip&gt;:8080</code></li>
-    <li><strong>Ansible (via SSH):</strong> Access the Ansible container through SSH:
+    <li><strong>Ansible container (via SSH):</strong> Access the Ansible container through SSH:
         <pre>
         ssh root@&lt;host-ip&gt; -p 2000
+        </pre>
+        <p><strong>Password:</strong> ansible</p>
+    </li>
+    <li><strong>Docker container (via SSH):</strong> Access the Ansible container through SSH:
+        <pre>
+        ssh root@&lt;host-ip&gt; -p 2001
         </pre>
         <p><strong>Password:</strong> docker</p>
     </li>
