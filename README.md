@@ -1,6 +1,6 @@
 <h1>Project Setup</h1>
 
-<p>This repository contains a structured setup for deploying Jenkins and Ansible using Docker. The directory structure includes Dockerfiles for both Jenkins and Ansible, as well as necessary configuration files.</p>
+<p>This repository contains a structured setup for deploying Jenkins , Ansible and Docker in Docker using Docker. The directory structure includes Dockerfiles for both Jenkins and Ansible, as well as necessary configuration files.</p>
 
 <h2>Folder Structure</h2>
 <pre>
