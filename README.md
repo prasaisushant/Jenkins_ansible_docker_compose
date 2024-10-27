@@ -26,7 +26,7 @@ folder
 <ol>
     <li><strong>Clone the Repository:</strong>
         <pre>
-        git clone &lt;repository_url&gt;
+        git clone https://github.com/prasaisushant/Jenkins_ansible_docker_compose.git
         cd &lt;repository_folder&gt;
         </pre>
     </li>
