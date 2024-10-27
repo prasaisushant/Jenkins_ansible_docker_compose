@@ -10,7 +10,7 @@ folder
   ├── docker
   │   └── Dockerfile        # Dockerfile for Jenkins
   ├── playbooks             # Directory for Ansible playbooks
-  ├── Jenkins_home          # Jenkins home directory
+  ├── jenkins_home          # Jenkins home directory
   └── docker-compose.yml     # Docker Compose configuration
 </pre>
 
@@ -32,8 +32,8 @@ folder
     </li>
     <li><strong>Set Permissions for Jenkins Home:</strong>
         <pre>
-        sudo chown -R 1000:1000 Jenkins_home
-        sudo chmod -R 755 Jenkins_home
+        sudo chown -R 1000:1000 jenkins_home
+        sudo chmod -R 755 jenkins_home
         </pre>
     </li>
     <li><strong>Start the Services:</strong>
