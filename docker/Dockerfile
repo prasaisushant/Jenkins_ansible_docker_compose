@@ -2,7 +2,7 @@
 FROM docker
 
 # Install SSH server and Java
-RUN apk update && apk add --no-cache openssh openjdk11-jre
+RUN apk update && apk add --no-cache openssh openjdk11-jre curl
 
 # Generate SSH host keys
 RUN ssh-keygen -A

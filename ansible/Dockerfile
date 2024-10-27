@@ -1,14 +1,20 @@
-FROM ansible/ansible:ubuntu1404
+FROM alpine/ansible:latest
 
 # Set root password to "ansible"
 RUN echo 'root:ansible' | chpasswd
 
+RUN apk update && \
+    apk add --no-cache openjdk11-jre openssh curl && \
+    mkdir -p /var/run/sshd
+
+RUN ssh-keygen -A
+
 # Configure SSH
-RUN sed -i 's/^PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
+RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && \
     echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config && \
-    mkdir -p /root/.ssh && \
-    mkdir -p /var/run/sshd && \
-    chmod 0755 /var/run/sshd  # Ensure the directory has correct permissions
+    mkdir -p /root/.ssh
+
+
 
 # Start SSH server
 CMD ["/usr/sbin/sshd", "-D"]
