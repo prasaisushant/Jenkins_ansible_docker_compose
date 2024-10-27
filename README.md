@@ -65,5 +65,5 @@ folder
 <ul>
     <li>Ensure that you replace <code>&lt;host_ip&gt;</code> with the actual IP address of your host machine.</li>
     <li> For those using docker desktop use localhost in place of host-ip</li>
-    <li>Make sure your firewall settings allow traffic on the required ports (8080 for Jenkins, 2000 for Ansible).</li>
+    <li>Make sure your firewall settings allow traffic on the required ports (8080 for Jenkins, 2000 for Ansible and 2001 for docker).</li>
 </ul>
