@@ -39,8 +39,7 @@ services:
     privileged: true
     environment:
       NGROK_AUTHTOKEN: "2o4MJoA2TCC1ZOlCe2Q7K4V8Bj6_VdkZK6GVBiTF3RfLLyEA"  # Replace with your ngrok auth token
-    command: >
-      http 192.168.100.10:8080 --log=stdout | grep --line-buffered 'started tunnel'
+    command: "http 192.168.100.10:8080 --log=stdout"
     networks:
       deploy:
         ipv4_address: 192.168.100.40
