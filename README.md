@@ -8,6 +8,8 @@ folder
   ├── ansible
   │   └── Dockerfile        # Dockerfile for Ansible
   ├── docker
+  │   └── Dockerfile        # Dockerfile for Docker in Docker 
+  ├── jenkins
   │   └── Dockerfile        # Dockerfile for Jenkins
   ├── playbooks             # Directory for Ansible playbooks
   ├── jenkins_home          # Jenkins home directory
