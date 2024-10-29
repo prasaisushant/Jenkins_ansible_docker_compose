@@ -6,8 +6,10 @@ services:
     container_name: jenkins-master
     ports:
       - "8080:8080"
+      - "50000:50000"
     volumes:
-      - ./jenkins_home:/var/jenkins_home   
+      - ./jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock   
     networks:
       deploy:
         ipv4_address: 192.168.100.10
@@ -29,6 +31,9 @@ services:
     privileged: true
     ports:
       - "2001:22"
+      - "2375:2375"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       deploy:
         ipv4_address: 192.168.100.30
