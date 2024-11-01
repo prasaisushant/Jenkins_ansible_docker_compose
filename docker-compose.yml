@@ -26,8 +26,8 @@ services:
         ipv4_address: 192.168.100.20
     command: >
       sh -c "sleep 59 && java -jar /playbooks/agent.jar
-      -url http://192.168.237.138:8080/
-      -secret 88e5b889a59738df2d6fa4b64c149c505fdee7cb7c0c05cb2780ba30605ded26
+      -url http://<jenkins-url/VM url>:8080/
+      -secret <secret>
       -name ansible
       -workDir /home/jenkins"
 
@@ -46,8 +46,8 @@ services:
         ipv4_address: 192.168.100.30
     command: >
       sh -c "sleep 59 && java -jar /dock/agent.jar
-      -url http://192.168.237.138:8080/
-      -secret 8b422214749fb2ba8b7a98c03b3188cebaad83c66ac37e730c4d1985ad7dfbd9
+      -url http://<jenkins-url/VM url>:8080/
+      -secret <secret>
       -name docker
       -workDir /home/jenkins"
   
