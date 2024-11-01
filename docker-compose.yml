@@ -24,6 +24,12 @@ services:
     networks:
       deploy:
         ipv4_address: 192.168.100.20
+    command: >
+      sh -c "sleep 59 && java -jar /playbooks/agent.jar
+      -url http://192.168.237.138:8080/
+      -secret 88e5b889a59738df2d6fa4b64c149c505fdee7cb7c0c05cb2780ba30605ded26
+      -name ansible
+      -workDir /home/jenkins"
 
   docker:
     build: ./docker
@@ -34,16 +40,23 @@ services:
       - "2375:2375"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./dock:/dock
     networks:
       deploy:
         ipv4_address: 192.168.100.30
+    command: >
+      sh -c "sleep 59 && java -jar /dock/agent.jar
+      -url http://192.168.237.138:8080/
+      -secret 8b422214749fb2ba8b7a98c03b3188cebaad83c66ac37e730c4d1985ad7dfbd9
+      -name docker
+      -workDir /home/jenkins"
   
   ngrok:
     image: ngrok/ngrok:latest
     container_name: ngrok
     privileged: true
     environment:
-      NGROK_AUTHTOKEN: "<auth-token>"  # Replace with your ngrok auth token
+      NGROK_AUTHTOKEN: "2o4MJoA2TCC1ZOlCe2Q7K4V8Bj6_VdkZK6GVBiTF3RfLLyEA"  # Replace with your ngrok auth token
     command: "http 192.168.100.10:8080 --log=stdout"
     networks:
       deploy:
