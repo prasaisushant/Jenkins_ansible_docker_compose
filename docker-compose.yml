@@ -56,7 +56,7 @@ services:
     container_name: ngrok
     privileged: true
     environment:
-      NGROK_AUTHTOKEN: "2o4MJoA2TCC1ZOlCe2Q7K4V8Bj6_VdkZK6GVBiTF3RfLLyEA"  # Replace with your ngrok auth token
+      NGROK_AUTHTOKEN: "<token>"  # Replace with your ngrok auth token
     command: "http 192.168.100.10:8080 --log=stdout"
     networks:
       deploy:
